@@ -1,7 +1,8 @@
 Word Auto Completer
 ==============================
-Base on the prefix this service will return suggested word from the dictionary.
+Base on the prefix this service will return suggested word from the dictionary.<br/>
 
+In order to run the application do the following: <br/>
 1. Install Maven 3
 2. Clone the repo and run maven command:
 ```bash
@@ -12,7 +13,7 @@ mvn spring-boot:run
 ./import-city.sh
 ```
 
-Following are sample request for getting suggestion in city list.
+<br/>Following are sample request for getting suggestion in city list.
 ```bash
 curl http://localhost:8085/suggest_cities?start=k&atmost=5
 ```
