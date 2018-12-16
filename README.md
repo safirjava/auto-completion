@@ -1,6 +1,6 @@
 Word Auto Completer
 ==============================
-Base on the prefix this service will return suggested word from the dictionary.<br/>
+Base on the prefix this service will return suggested word from the dictionary. Using <b>Trie data structure</b> to store the dictionary word for faster search.<br/>
 
 In order to run the application do the following: <br/>
 1. Install Maven 3
