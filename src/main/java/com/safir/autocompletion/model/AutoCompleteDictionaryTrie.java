@@ -94,7 +94,7 @@ public class AutoCompleteDictionaryTrie implements Dictionary, AutoComplete, Ser
     @Override
     public List<String> predictCompletions(String prefix, int numCompletions) {
         prefix = prefix.toLowerCase();
-        List<String> completions = new LinkedList<String> ();
+        List<String> completions = new LinkedList<> ();
         TrieNode currentNode = root;
         for(int i = 0; i < prefix.length(); i++){
             if (currentNode.getValidNextCharacters().contains(prefix.charAt(i))){
@@ -104,7 +104,7 @@ public class AutoCompleteDictionaryTrie implements Dictionary, AutoComplete, Ser
         if(!currentNode.getText().equals(prefix)){
             return completions;
         }
-        LinkedList<TrieNode> queue = new LinkedList<TrieNode>();
+        LinkedList<TrieNode> queue = new LinkedList<>();
         queue.add(currentNode);
 
         TrieNode possibleCompletion;

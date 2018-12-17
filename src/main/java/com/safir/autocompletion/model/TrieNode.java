@@ -3,13 +3,15 @@ package com.safir.autocompletion.model;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 /**
  * Represents a node in a Trie
  * @author Sk Safiruddin
  */
 public class TrieNode implements Serializable {
-    private HashMap<Character, TrieNode> children;
+    private ConcurrentMap<Character, TrieNode> children;
     private String text;
     private boolean isWord;
 
@@ -18,7 +20,7 @@ public class TrieNode implements Serializable {
      */
     public TrieNode()
     {
-        children = new HashMap<Character, TrieNode>();
+        children = new ConcurrentHashMap<> ();
         text = "";
         isWord = false;
     }
